@@ -1,0 +1,81 @@
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// /* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body input[type=number] {
+    -moz-appearance: textfield;
+    /*For FireFox*/
+}
+
+body input[type=number]::-webkit-inner-spin-button {
+    /*For Webkits like Chrome and Safari*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+:root {
+    --white: #fff;
+    --primary-main: #4fc744;
+    --font-color: #636363;
+    --light-gray: #f2f2f2;
+    --black: #000;
+    --section-bg: #F8F8F8;
+    --primary-green:#74c305;
+    --sidebar-li: #f7fafc;
+    --select-border: #fff0b5;
+    --plan-odd-left: #eafaea;
+    --plan-odd-bg:#f3fcf3;
+    --plan-odd-bottom: #fafefa;
+    --plan-even-left: #fff7dc;
+    --plan-even-bg: #fff5d2;
+    --plan-even-bottom: #fffbec;
+    --tab-border: #ddd;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+    transition: 0.3s all;
+    color: var(--black);
+
+    &:hover {
+        color: var(--primary-main);
+    }
+}

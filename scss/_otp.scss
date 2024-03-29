@@ -1,0 +1,45 @@
+.otp_fields {
+    .otp_block {
+        padding-bottom: 35px;
+        position: relative;
+
+        p.error-msg {
+            width: 100% !important;
+            max-width: 100% !important;
+            // margin: 10px 0 40px 0;
+            margin: 0 !important;
+            color: var(--primary-main) !important;
+            position: absolute !important;
+            left: 8px !important;
+            text-align: left !important;
+            font-size: 12px !important;
+            line-height: normal !important;
+            font-weight: 500 !important;
+            bottom: 0 !important;
+        }
+    }
+
+    div {
+        justify-content: space-between;
+        padding: 0 32px;
+    }
+
+    .otp_input {
+        --border-color: #B3B3B3;
+        border: 0;
+        border-bottom: 1px solid var(--border-color);
+        width: 40px !important;
+        padding: 9px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--black);
+        outline: none;
+        transition: 0.3s all;
+
+        &:focus-visible {
+            border-bottom: 1px solid var(--primary-main);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+span.highlight {
+    color: var(--primary-main);
+}
+
+.d_block {
+    display: block;
+}
+
+.iqom_container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.main_body {
+    min-height: 100vh;
+}
+
+.customBtn {
+    color: var(--white);
+    font-family: SamsungOne;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 30px;
+    background: var(--primary-main);
+    border: 1px solid var(--primary-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 1px 1px 14px #535252;
+        background-color: var(--white);
+        color: var(--primary-main);
+    }
+}

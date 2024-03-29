@@ -1,0 +1,414 @@
+.checkout_summary_block {
+    position: relative;
+    border-bottom: 1px solid var(--tab-border);
+    font-family: 'Poppins';
+
+    .form_check_item {
+        width: 100%;
+        position: relative;
+
+        input[type=checkbox] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 1;
+
+            &:checked+label {
+                &::before {
+                    background: var(--primary-main);
+                    border: 2px solid var(--primary-main);
+                }
+            }
+        }
+
+        label {
+            padding-left: 32px;
+            position: relative;
+            font-size: 15px !important;
+            line-height: 24px !important;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                border: 2px solid var(--tab-border);
+                border-radius: 5px;
+                transition: 0.3s all;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 6px;
+                left: 5px;
+                width: 14px;
+                height: 7px;
+                border: 2px solid var(--white);
+                border-top: 0;
+                border-right: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .inner_row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .left_side {
+            width: calc(100% - 640px);
+            padding-left: calc((100% - 1440px) / 2);
+            padding-right: 35px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            .checkout_panel {
+                h3 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    margin: 25px 0 50px 0;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid var(--tab-border);
+                }
+
+                .form_block {
+
+                    label {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+
+                    .name_field {
+                        margin: 0 -16px 24px;
+                    }
+
+                    .select_block,
+                    .firstname,
+                    .lastname {
+                        padding: 0 16px;
+                    }
+
+                    .select_block {
+                        width: 20%;
+                    }
+
+                    .firstname,
+                    .lastname {
+                        width: 40%;
+                    }
+
+                    input[type=text],
+                    input[type=tel],
+                    input[type=email],
+                    select {
+                        box-shadow: none;
+                        outline: none;
+                        transition: 0.3s all;
+                        padding: 12px;
+                        color: var(--font-color);
+
+                        &:focus,
+                        &:focus-visible {
+                            border: 1px solid var(--black);
+                        }
+
+                    }
+
+                    &::placeholder {
+                        color: var(--light-gray);
+                    }
+
+
+
+                    .dob_field {
+                        margin-bottom: 24px;
+
+                        .input_row {
+                            display: flex;
+                            gap: 16px;
+                            max-width: 300px;
+                        }
+                    }
+
+                    .email_fields {
+                        margin: 0 -16px 24px;
+
+                        .field_col {
+                            width: 50%;
+                            padding: 0 16px;
+                        }
+                    }
+
+                    .form_check_item {
+                        margin-bottom: 24px;
+                    }
+
+                    .number_block {
+                        margin: 0 -16px 24px;
+
+                        .field_col {
+                            width: 50%;
+                            padding: 0 16px;
+
+                            p {
+                                font-size: 14px;
+                                color: var(--font-color);
+                                margin: 4px 0;
+                            }
+                        }
+                    }
+
+                }
+
+                .address_block {
+                    padding: 40px 0;
+                    margin-top: 40px;
+                    border-width: 1px 0;
+                    border-style: solid;
+                    border-color: var(--tab-border);
+
+                    h5 {
+                        font-size: 24px;
+                        margin-bottom: 24px;
+                    }
+
+                    a {
+                        display: inline-block;
+                        color: var(--primary-main);
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        transition: 0.3s all;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            border-bottom: 1px solid var(--primary-main);
+                        }
+                    }
+
+                    .form_block {
+                        gap: 16px;
+                        align-items: flex-end;
+                        margin-bottom: 24px;
+
+                        input[type=submit] {
+                            height: 50px;
+                            padding: 0 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: var(--primary-main);
+                            color: var(--white);
+                            transition: 0.3s all;
+                            border: 2px solid var(--primary-main);
+                            border-radius: 50px;
+                            font-weight: 500;
+
+                            &:hover {
+                                background: var(--white);
+                                color: var(--primary-main);
+                            }
+                        }
+                    }
+
+                    .shipping_address {
+                        margin-top: 24px;
+                    }
+                }
+
+                .marketing_option_block {
+                    margin-top: 40px;
+
+                    h5 {
+                        font-size: 24px;
+                        margin-bottom: 24px;
+                    }
+
+                    .form_check_row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 32px;
+                        margin-bottom: 24px;
+
+                        .form_check_item {
+                            width: fit-content;
+
+                            label {
+                                font-size: 16px !important;
+                                padding-left: 40px !important;
+                            }
+                        }
+                    }
+
+                    p {
+                        b {
+                            display: block;
+                        }
+                    }
+
+                    .block_item {
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+
+        .right_side {
+            width: 640px;
+            padding-right: calc((100% - 1440px) / 2);
+            background-color: var(--light-gray);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 32px;
+
+            .order_summary {
+
+                input[type=text],
+                input[type=tel],
+                input[type=email],
+                select {
+                    box-shadow: none;
+                    outline: none;
+                    transition: 0.3s all;
+                    padding: 12px;
+                    color: var(--font-color);
+                    background: var(--white);
+
+                    &:focus,
+                    &:focus-visible {
+                        border: 1px solid var(--black);
+                    }
+
+                }
+
+                h4 {
+                    font-size: 28px;
+                    font-weight: 500;
+                    margin: 25px 0 50px;
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid var(--tab-border);
+                }
+
+                p.title {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .summary_items {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                    }
+                }
+
+                .shipping_select,
+                .trade_in_cost,
+                .promocode_block,
+                .total_cost_block,
+                .pay_block,
+                .help_block {
+                    margin-top: 20px;
+
+                    p.title {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                .trade_in_cost {
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        justify-content: space-between;
+                        background: var(--plan-even-bg);
+                        padding: 8px;
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .total_cost_block {
+                    padding-top: 24px;
+                    border-top: 1px solid var(--tab-border);
+                    margin-top: 24px;
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid var(--tab-border);
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+
+                        p {
+                            font-weight: 600;
+                        }
+                    }
+
+                    input[type=submit] {
+                        width: 100%;
+                        height: 43px;
+                        text-align: center;
+                        padding: 0 30px;
+                        background: var(--primary-main);
+                        color: var(--white);
+                        font-weight: 600;
+                        transition: 0.3s all;
+                        border: 0;
+                        border-radius: 50px;
+
+                        &:hover {
+                            background: var(--black);
+                            color: var(--white);
+                        }
+                    }
+                }
+
+                .pay_block {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout_info {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--tab-border);
+    font-family: 'Poppins';
+
+    .inner_row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        .item{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            p{
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.fWrap {
+    flex-wrap: wrap;
+}

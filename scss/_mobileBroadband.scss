@@ -1,0 +1,226 @@
+.inner_banner_top {
+    background: var(--black);
+    padding: 16px;
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        p {
+            font-size: 16px;
+            font-family: 'Poppins';
+            color: var(--white);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .call_back {
+            display: flex;
+            color: var(--white);
+            align-items: center;
+            gap: 6px;
+        }
+
+        .call_btn {
+            a {
+                color: var(--white);
+                font-family: 'Poppins';
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+        }
+    }
+}
+
+.page_banner {
+    position: relative;
+
+    .bg_layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-main);
+            opacity: 0.5;
+        }
+    }
+
+    .txt_layer {
+        position: relative;
+        z-index: 1;
+        padding: 64px 0 128px 0;
+
+        h2 {
+            font-size: 48px;
+            color: var(--white);
+            font-family: 'Poppins';
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            line-height: 120%;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            line-height: 30px;
+            color: var(--white);
+            font-family: 'Poppins';
+            margin: 0;
+        }
+    }
+}
+
+.simple_txt_banner {
+    position: relative;
+    z-index: 1;
+    margin-top: -64px;
+
+    .txt_banner {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 48px 24px;
+        text-align: center;
+
+        h3 {
+            font-family: 'Poppins';
+            color: var(--black);
+            font-size: 32px;
+            line-height: 110%;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-family: 'Poppins';
+            color: var(--black);
+            font-size: 16px;
+            line-height: 110%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.broadband_products {
+    position: relative;
+    padding: 60px 0;
+
+    .section_heading {
+        font-family: 'samsungOne';
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            line-height: normal;
+            margin-bottom: 50px;
+            color: var(--primary-main);
+            font-weight: 700;
+        }
+    }
+
+    .inner_row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .col_item {
+            flex: 0 0 auto;
+            width: calc((100% - 60px) / 4);
+
+            .inner_col {
+                padding: 32px 24px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                height: 100%;
+                transition: 0.3s all;
+                position: relative;
+                a.product_link{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                .product_block {
+                    position: relative;
+
+                    span.tag {
+                        position: absolute;
+                        top: -40px;
+                        left: 0;
+                        width: fit-content;
+                        padding: 4px 8px;
+                        color: var(--white);
+                        font-family: 'samsungOne';
+                        text-transform: uppercase;
+                        background: var(--primary-main);
+                        border-radius: 4px;
+                        font-weight: 700;
+                        font-size: 12px;
+                    }
+
+                    .img_block {
+                        height: 200px;
+                        margin: 32px 0;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .title {
+                        text-align: center;
+                        font-family: 'samsungOne';
+                        color: var(--black);
+                        margin: 16px 0 4px;
+                        font-weight: 700;
+                    }
+
+                    p.subTitle {
+                        text-align: center;
+                        font-family: 'samsungOne';
+                        color: var(--black);
+                        margin: 4px 0;
+
+                        strong {
+                            font-weight: 700;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                        font-family: 'samsungOne';
+                        color: var(--black);
+                        margin: 4px 0;
+                    }
+                }
+            }
+        }
+    }
+}

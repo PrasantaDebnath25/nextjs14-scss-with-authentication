@@ -1,0 +1,368 @@
+.login_block {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .bg_block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .side_img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            object-fit: none;
+        }
+    }
+
+    .text_block {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        overflow: auto;
+
+        .inner {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            // flex-direction: column;
+            padding: 90px 16px;
+            height: auto;
+
+            img {
+                margin: 0 auto 46px;
+                display: block;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 62px;
+                font-size: 16px;
+                color: var(--black);
+                font-family: 'samsungOne';
+
+                a {
+                    color: var(--primary-main);
+                    transition: 0.3s all;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        border-bottom: 1px solid var(--primary-main);
+                    }
+                }
+            }
+
+            p.privacy_policy_txt {
+                width: 100%;
+                max-width: 400px;
+                margin-top: 40px;
+                margin-bottom: 0;
+                line-height: 24px;
+                margin-inline: auto;
+
+                a {
+                    color: var(--primary-main);
+                    transition: 0.3s all;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        border-bottom: 1px solid var(--primary-main);
+                    }
+                }
+            }
+
+            .inner_block {
+                padding: 28px 57px 33px;
+                border-radius: 20px;
+                background: var(--white);
+                box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.12);
+                width: 100%;
+                max-width: 565px;
+                margin: 0 auto;
+
+                h3 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    color: var(--primary-main);
+                    text-align: center;
+                    font-family: 'samsungOne';
+                }
+
+                p {
+                    color: var(--font-color);
+                    font-size: 14px;
+                    text-align: center;
+                    margin: 0 auto 24px;
+                    max-width: 450px;
+                    width: 100%;
+                    line-height: 24px;
+                    font-family: 'samsungOne';
+                }
+
+                p.error-msg {
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 10px 0 40px 0;
+                    color: var(--primary-main);
+                    position: absolute;
+                    left: 8px;
+                    text-align: left;
+                    font-size: 12px;
+                    line-height: normal;
+                    font-weight: 500;
+                }
+
+                .form_block {
+                    position: relative;
+                    width: 100%;
+
+                    label {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--black);
+                        margin-bottom: 0;
+                    }
+
+                    .field_grp {
+                        margin-bottom: 16px;
+                        position: relative;
+
+                        .phn_input_grp {
+                            position: relative;
+
+                            input {
+                                padding: 16px 16px 16px 150px;
+                            }
+
+                            .cc_list {
+                                font-size: 14px;
+                                line-height: 24px;
+                                transition: 0.3s all;
+                                // -webkit-appearance: none;
+                                // appearance: none;
+                                border: 0;
+                                position: absolute;
+                                background: transparent;
+                                outline: none;
+                                padding: 16px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 25%;
+                            }
+                        }
+
+                        input {
+                            --this-bg: #FFF3F4;
+                            // width: 100%;
+                            width: -webkit-fill-available;
+                            max-width: 100%;
+                            // border-radius: 50px;
+                            padding: 16px;
+                            background: var(--this-bg);
+                            transition: 0.5s;
+                            border: 0;
+                            border-bottom: 1px solid var(--primary-main);
+                            // outline: 1px solid transparent;
+                            outline: none;
+                            font-size: 14px;
+                            line-height: 24px;
+                            box-shadow: none;
+
+                            &:focus-visible,
+                            &:hover {
+                                border-bottom: 2px solid var(--primary-main) !important;
+                            }
+                        }
+                    }
+
+                    .input_group {
+                        position: relative;
+                        margin-bottom: 35px;
+                        width: 100%;
+
+                        .passShowHideBtn {
+                            background: transparent;
+                            border: 0;
+                            right: 16px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            position: absolute;
+                            cursor: pointer;
+
+                            * {
+                                color: var(--font-color);
+                            }
+                        }
+
+                        .field_icon {
+                            position: absolute;
+                            color: var(--primary-main);
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 16px;
+                        }
+
+                        img {
+                            position: absolute;
+                            left: 16px;
+                            top: 18px;
+                            // transform: translateY(-50%);
+                        }
+
+                        input {
+                            // --this-bg: #FFF3F4;
+                            // width: 100%;
+                            width: -webkit-fill-available;
+                            max-width: 100%;
+                            // border-radius: 50px;
+                            border-radius: 0;
+                            padding: 16px 16px 16px 52px;
+                            background: var(--white);
+                            transition: 0.5s;
+                            border: 0;
+                            border-bottom: 1px solid var(--primary-main);
+                            // outline: 1px solid transparent;
+                            outline: none;
+                            font-size: 14px;
+                            line-height: 24px;
+                            box-shadow: none;
+
+                            &:focus-visible,
+                            &:hover {
+                                border-bottom: 2px solid var(--primary-main) !important;
+                            }
+                        }
+
+
+                    }
+
+
+
+                    .submit_btn {
+                        --this-bg: #FFF3F4;
+                        width: 100%;
+                        display: block;
+                        background: var(--primary-main);
+                        color: var(--white);
+                        font-size: 20px;
+                        font-weight: 700;
+                        border-radius: 50px;
+                        border: 2px solid transparent;
+                        line-height: 30px;
+                        padding: 13px;
+                        text-transform: capitalize;
+                        transition: 0.3s all;
+                        margin: 24px 0;
+                        cursor: pointer;
+                        font-family: 'samsungOne';
+
+                        &:hover {
+                            background: var(--this-bg);
+                            color: var(--primary-main);
+                            border: 2px solid var(--primary-main);
+                        }
+                    }
+
+                    .forgot_password {
+                        text-align: center;
+                        margin-top: 24px;
+
+                        a {
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 24px;
+                            font-weight: 400;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.registration_block {
+    .text_block {
+        .inner {
+            .inner_block {
+                .form_block {
+                    .field_grp {
+                        margin-bottom: 35px;
+
+                        .passShowHideBtn {
+                            background: transparent;
+                            border: 0;
+                            right: 16px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            position: absolute;
+                            cursor: pointer;
+
+                            * {
+                                color: var(--font-color);
+                            }
+                        }
+
+                        input {
+                            background: var(--white);
+                        }
+
+                        .input_group {
+                            margin-bottom: 0;
+
+                            .field_icon {
+                                position: absolute;
+                                color: var(--primary-main);
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 16px;
+                            }
+                        }
+
+                        p.error-msg {
+                            margin: 4px 0;
+                        }
+
+                        .phn_input_grp {
+                            .field_icon {
+                                position: absolute;
+                                color: var(--primary-main);
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 16px;
+                            }
+
+                            .cc_list {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                border-right: 1px solid var(--primary-main);
+                                padding: 12px 4px;
+                                left: 32px;
+                                text-align: center;
+                            }
+
+                            input {
+                                padding: 16px 16px 16px 185px;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+.site_footer {
+    .footer_top {
+        background: var(--primary-main);
+        padding: 32px 0;
+
+        h5 {
+            color: var(--white);
+            font-size: 18px;
+            line-height: 33px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            font-family: 'samsungOne';
+        }
+
+        .inner_row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+
+            .subscribe_col {
+                width: 416px;
+
+                .subscribe_group {
+                    position: relative;
+
+                    input[type=text] {
+                        border-radius: 50px;
+                        padding: 9px 31px;
+                        border: 0;
+                        font-size: 16px;
+                        line-height: 33px;
+                        font-weight: 400;
+                        color: var(--black);
+                        width: -webkit-fill-available;
+                        max-width: 100%;
+                        outline: none;
+                        font-family: 'samsungOne';
+                    }
+
+                    input[type=submit] {
+                        position: absolute;
+                        right: 0;
+                        border-radius: 50px;
+                        border: 0;
+                        background: var(--black);
+                        color: var(--white);
+                        padding: 3px 30px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 33px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 7px;
+                        cursor: pointer;
+                        transition: 0.3s all;
+                        font-family: 'samsungOne';
+
+                        &:hover {
+                            background: var(--primary-main);
+                        }
+                    }
+
+                    &::placeholder {
+                        font-size: 16px;
+                        line-height: 33px;
+                        font-weight: 400;
+                        color: var(--black);
+                        font-family: 'samsungOne';
+                    }
+                }
+            }
+
+            .footer_col {
+                width: calc((100% - (416px + 100px)) / 2);
+
+
+
+                ul.links {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 50px;
+
+                    li {
+                        width: calc((100% - 50px) / 2);
+                        flex: 0 0 auto;
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 33px;
+                            color: var(--white);
+                            font-family: 'samsungOne';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_bottom {
+        background: var(--black);
+        padding: 3px 0;
+
+        .inner_row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                width: calc((100% - (350px + 32px)) / 2);
+                flex: 0 0 auto;
+
+                a {
+                    color: var(--white);
+                    font-size: 16px;
+                    line-height: 33px;
+                    font-weight: 400;
+                }
+            }
+
+            .mid {
+                width: 350px;
+                max-width: 100%;
+                flex: 0 0 auto;
+
+                p {
+                    color: var(--white);
+                    font-size: 12px;
+                    line-height: 33px;
+                    font-weight: 400;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+
+            .right {
+                width: calc((100% - (350px + 32px)) / 2);
+                flex: 0 0 auto;
+
+                ul.social_media_links {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}

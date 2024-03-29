@@ -1,0 +1,147 @@
+.site_header {
+    padding: 16px 0;
+    position: sticky;
+    height: fit-content;
+    top: 0;
+    z-index: 999999;
+
+    .inner_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .left_bar {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            .brand_logo {
+                width: 100px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .iqom_nav_menu {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        a {
+                            font-family: 'samsungOne';
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: var(--black);
+
+                            &:hover {
+                                color: var(--primary-main);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_bar {
+            .icon_links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 35px;
+                align-items: center;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 35px;
+                    list-style-type: none;
+
+                    li.profile_dropdwn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 6px;
+                        position: relative;
+
+                        span {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            .account_info {
+                                transform: translateX(-50%) scale(1);
+                            }
+                        }
+
+                        .account_info {
+                            position: absolute;
+                            width: fit-content;
+                            background: var(--white);
+                            padding: 8px;
+                            bottom: -85px;
+                            border-radius: 8px;
+                            left: 50%;
+                            transform: translateX(-50%) scale(0);
+                            transition: 0.3s all;
+
+                            span {
+                                font-family: 'samsungOne';
+                            }
+
+                            .logout_btn {
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                background: transparent;
+                                border: 0;
+                                color: var(--white);
+                                background: var(--primary-main);
+                                border-radius: 8px;
+                                padding: 4px 8px;
+                                transition: 0.3s all;
+                                border: 1px solid transparent;
+                                cursor: pointer;
+                                // position: absolute;
+                                // bottom: -35px;
+                                width: 100%;
+                                justify-content: center;
+                                // width: 150px;
+                                font-family: 'samsungOne';
+                                margin-top: 10px;
+
+                                &:hover {
+                                    background: var(--white);
+                                    color: var(--primary-main);
+                                    border: 1px solid var(--primary-main);
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+                .switchBusinessBtn {
+                    padding: 10px 23px;
+                    border-radius: 50px;
+                    background: var(--black);
+                    color: var(--white);
+                    font-family: 'samsungOne';
+                    transition: 0.3s all;
+
+                    &:hover {
+                        background: var(--primary-main);
+                    }
+                }
+            }
+        }
+    }
+}
